@@ -1,6 +1,6 @@
 {
-  "name": "Zigbee2MQTT",
-  "version": "1.36.1-1",
+  "name": "Zigbee2MQTT13601",
+  "version": "1.36.0-1",
   "slug": "zigbee2mqtt",
   "description": "Use your ZigBee devices without the vendor's bridge or gateway",
   "uart": true,
@@ -26,19 +26,19 @@
     "config:rw"
   ],
   "ports": {
-    "8485/tcp": 8485,
+    "8384/tcp": 8384,
     "8099/tcp": null
   },
   "ports_description": {
-    "8485/tcp": "Socat tcp-listen port",
+    "8384/tcp": "Socat tcp-listen port",
     "8099/tcp": "Frontend tcp-listen port"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt",
+    "data_path": "/config/zigbee2mqtt13601",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M,mode=777",
-      "slave": "tcp-listen:8485,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8384,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
